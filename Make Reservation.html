@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Reservation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background-color: #12e3c7;
+            color: white;
+            padding: 1rem;
+            width: 100%;
+            text-align: center;
+        } 
+        h1{
+            text-transform: underline;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: larger;
+        }
+        main {
+            width: 100%;
+            max-width: 600px;
+            padding: 2rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 0.5rem 0 0.25rem 0;
+        }
+        input {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #0df0d6;
+            color: white;
+            border: none;
+            padding: 0.75rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        #confirmation {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Make a Reservation</h1>
+    </header>
+    <main>
+        <form id="reservationForm" onsubmit="submitReservation(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" required>
+
+            <button type="submit">Submit Reservation</button>
+        </form>
+        <div id="confirmation"></div>
+    </main>
+    <script>
+        function submitReservation(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const guests = document.getElementById('guests').value;
+            const confirmation = document.getElementById('confirmation');
+            confirmation.innerHTML = "Reservation Confirmed"
+        }
+                <p>Thank you {name}!. We have reserved a table for {guests} on {date} at {time}. A confirmation text has been sent to{email}.</p>
+    </script>
+</body>
+</html>

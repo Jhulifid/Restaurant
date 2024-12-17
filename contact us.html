@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: aqua;
+         }
+    p{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: medium;
+    }
+    button{
+        background-color: rgb(146, 146, 219);
+        text-align: center;
+        touch-action: auto;  
+        padding: 10px 20px;
+        color:aliceblue;
+        border: none;
+        border-radius: 10px;
+    }
+    .container{
+        max-width: 1000px;
+        margin: 70px auto;
+        padding: 70px;
+        background-color: azure;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+        <h1><u>Contact Us</u></h1>
+        <p>Phone: +233 0537398184</p>
+        <p>Email: jceasar265@gmail.com</p>
+        <p>Whatsapp number: 0537398184</p>
+        <p>Address: Dome Kwabenya - Ashongman Estate</p>
+        <form action="feedback" method="post">
+        <input type="text"id="text"placeholder="Name"required><br>
+        <input type="email"id="email"placeholder="Your Email"required><br>
+        <label for="comment">Your Comment:</label><br>
+        <textarea id="comment"rows="5" cols="40" placeholder="Write your comment here..."required></textarea><br>
+        <button type="submit">Submit</button> 
+    </form>
+    <br>
+        </div>
+    </main>
+    <a href="index.html">Go back to Home Page</a>
+</body>
+</html>
